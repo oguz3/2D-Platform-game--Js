@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+  font-family: 'Indie Flower', cursive;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 237, 233, 1) 43%,
+    rgba(49, 186, 214, 1) 100%
+  );
+}
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 100;
+  color: #000000c7;
+  margin-top: 5vh;
+}
+span{
+  position: absolute;
+  left: 50%;
+  margin-left: -110px;
+  top: 50%;
+  margin-top: -98px;
+  background-color: #000000c9;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+}
+#defeat {
+  opacity: 0;
+}
+#canvas1 {
+  box-shadow: 2px 3px 20px #000000c7;
+}
+.btn{
+  font-family: 'Indie Flower', cursive;
+  font-size: 24px;
+  margin: 25px 20vw;
+  padding: 5px 0px;
+  border:2px solid #3f961d;;
+  border-radius: 25px;
+  background-color: transparent;
+}
+.btn:hover{
+  background-color: #4f9f2f;
+  color: #fff;
+}
+.animate-defeat {
+  -webkit-animation: defeatt 1s;
+  animation: defeatt 1s;
+  animation-fill-mode: forwards;
+}
+.animate-start {
+  -webkit-animation: startt 1s;
+  animation: startt 1s;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+@keyframes defeatt {
+  0% {
+    margin-top: -400px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -98px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes defeatt {
+  0% {
+    margin-top: -400px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -98px;
+    opacity: 1;
+  }
+}
+@keyframes startt {
+  0% {
+    margin-top: -98px;
+    opacity: 1;
+  }
+  100% {
+    margin-top: -400px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes startt {
+  0% {
+    margin-top: -98px;
+    opacity: 1;
+  }
+  100% {
+    margin-top: -400px;
+    opacity: 0;
+  }
+}

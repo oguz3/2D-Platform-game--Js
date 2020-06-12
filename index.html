@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2D - Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Basic 2D platform game --Js</h2>
+      <p id="score"></p>
+      <span id="start">
+        <h3>Welcome</h3>
+        <p>This game has a only 1 key !</p>
+        <i class="fas fa-caret-square-up fa-3x"></i>
+      </span>
+      <span id="defeat">
+        <h3>Defeat</h3>
+        <p>You're dead... Try again</p>
+        <p id="game-score"></p>
+        <i class="fas fa-skull-crossbones fa-3x"></i>
+      </span>
+      <canvas id="canvas1"></canvas>
+
+      <button id="btn-jump" type="button" class="btn" onclick="jumpBtn()">Jump</button>
+    </div>
+    <script src="game.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyByvAPQDO45Bdz_rxeM8s93JqkLZb18gNo",
+        authDomain: "d-game-js.firebaseapp.com",
+        databaseURL: "https://d-game-js.firebaseio.com",
+        projectId: "d-game-js",
+        storageBucket: "d-game-js.appspot.com",
+        messagingSenderId: "491544758813",
+        appId: "1:491544758813:web:f1188f2028c0b52e6094f4",
+        measurementId: "G-G9GSBPXB90",
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    
+  </body>
+</html>
