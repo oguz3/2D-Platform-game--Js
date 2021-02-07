@@ -1,4 +1,8 @@
 # 2D-Platform-game--Js
+
+## Desktop 
+![Screenshot](https://raw.githubusercontent.com/oguz3/2D-Platform-game--Js/master/Asset/2d_game.PNG)
+
 Basic platform game in js
 + Adjusts the width of the canvas according to the width of the browser each time the page is refreshed.
 
