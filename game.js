@@ -1,12 +1,16 @@
-var canvas = document.getElementById("canvas1");
+var canvas = document.getElementById("canvasEnemy");
+var canvasBg = document.getElementById("canvasBg");
+var canvasH = document.getElementById("canvasHero");
 var ctx = canvas.getContext("2d");
+var ctxBg = canvasBg.getContext("2d");
+var ctxE = canvasH.getContext("2d");
 let width = 1000;
 if (screen.width <= 1000) {
   width = screen.width;
-  canvas.height = canvas.width/2;
+  canvas.height = canvasBg.height = canvasH.width = canvas.width/2;
 }
-canvas.width = width;
-canvas.height = canvas.width/2;
+canvas.width = canvasBg.width = canvasH.width = width;
+canvas.height = canvasBg.height = canvasH.height = canvas.width/2;
 
 let imgwidth = 0;
 let scrollSpeed = width/200;
@@ -53,8 +57,8 @@ var GameControl = setInterval(Control, 1000/30);
 document.addEventListener("keydown", jump);
 
 function loop() {
-  ctx.drawImage(bg, imgwidth, 0,canvas.width,canvas.height);
-  ctx.drawImage(bg, imgwidth + canvas.width, 0,canvas.width,canvas.height);
+  ctxBg.drawImage(bg, imgwidth, 0,canvas.width,canvas.height);
+  ctxBg.drawImage(bg, imgwidth + canvas.width, 0,canvas.width,canvas.height);
   imgwidth -= scrollSpeed;
 
   if (imgwidth <= -canvas.width) {
@@ -79,12 +83,14 @@ function Score(){
 function drawChar(h, yT) {
   character = new Image();
   character.src = charWalk[h];
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(character, canvas.width/3, yT ,canvas.width/6,canvas.height/6);
 }
 function drawEnemy(h, xT) {
   Cenemy = new Image();
   Cenemy.src = enemy[h];
-  ctx.drawImage(Cenemy, xT, canvas.height/1.28, canvas.width/13, canvas.height/10);
+  ctxE.clearRect(0, 0, canvas.width, canvas.height);
+  ctxE.drawImage(Cenemy, xT, canvas.height/1.28, canvas.width/13, canvas.height/10);
 }
 function jumpBtn(){
     if(yT == canvas.height/1.38){

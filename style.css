@@ -33,12 +33,30 @@ span{
   text-align: center;
   color: white;
   border-radius: 25px;
+  z-index: 99;
 }
 #defeat {
   opacity: 0;
 }
-#canvas1 {
+.canvass{
+  position: relative;
+}
+#canvasBg{
   box-shadow: 2px 3px 20px #000000c7;
+  position: relative;
+  z-index: 1;
+}
+#canvasEnemy{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+#canvasHero{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
 }
 .btn{
   font-family: 'Indie Flower', cursive;
